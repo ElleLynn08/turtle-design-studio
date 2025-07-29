@@ -1,4 +1,6 @@
 import turtle
+import matplotlib.pyplot as plt
+import numpy as np
 
 # ───── Setup ─────
 t = turtle.Turtle()
@@ -95,12 +97,12 @@ def drawL():
     t.speed(1)
     t.penup()
     t.goto(100, 100)
-    t.setheading(270)  # face down
+    t.setheading(270)
     t.color('blue')
     t.width(5)
     t.pendown()
     t.forward(50)
-    t.setheading(0)    # face right
+    t.setheading(0)
     t.forward(100)
     t.penup()
     t.hideturtle()
@@ -162,6 +164,26 @@ def drawRainbowSpiral():
     t.penup()
     t.hideturtle()
 
+def draw_flowerburst_matplotlib():
+    fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+    ax.set_facecolor("white")
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.grid(False)
+
+    num_petals = 72
+    radius = 100
+    theta = np.linspace(0, 2 * np.pi, num_petals, endpoint=False)
+
+    for i, angle in enumerate(theta):
+        color = plt.cm.hsv(i / num_petals)
+        ax.plot([angle] * 100, np.linspace(0, radius, 100), color=color, linewidth=1)
+
+    output_path = "drawing_output_flowerburst.png"
+    plt.savefig(output_path, bbox_inches='tight', pad_inches=0, dpi=150)
+    plt.close()
+    print(f"\\n✅ Image saved to {output_path}")
+
 # ───── Launcher ─────
 if __name__ == "__main__":
     options = [
@@ -174,19 +196,20 @@ if __name__ == "__main__":
         "drawWave",
         "drawRainbowStripes",
         "drawFlowerBurst",
-        "drawRainbowSpiral"
+        "drawRainbowSpiral",
+        "draw_flowerburst_matplotlib"
     ]
 
-    print("\\n🎨 Welcome to the Turtle Design Studio!")
+    print("🎨 Welcome to the Turtle Design Studio!")
 
     while True:
-        print("\\nWhich turtle function would you like to run?\\n")
+        print("Which turtle function would you like to run?")
         for idx, name in enumerate(options, 1):
             print(f"{idx}. {name}")
         print("0. Exit")
-        print("99. Run all\\n")
+        print("99. Run all")
 
-        choice = input("Enter number (0–10 or 99): ")
+        choice = input("Enter number (0–11 or 99): ")
 
         try:
             selection = int(choice)
@@ -207,7 +230,7 @@ if __name__ == "__main__":
                 input("\\n✅ Drawing complete! Press Enter to return to menu...")
                 t.clear()
             else:
-                print("❌ Invalid choice. Please enter a number from 0 to 10.")
+                print("❌ Invalid choice. Please enter a number from 0 to 11.")
         except Exception as e:
             print(f"❌ Error: {e}")
 
