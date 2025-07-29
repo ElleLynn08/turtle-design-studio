@@ -35,6 +35,17 @@ While the Vanderbilt-hosted WebGME instance prevents direct upload of custom vis
 - “Add Command” button dynamically generates nodes in the model
 - Designed to simplify command creation without dragging or wiring blocks
 
+## 🎨 Visual Enhancements
+
+To ensure model creation is intuitive and visually accessible, I added SVG-based decorators to key command nodes. Each command displays:
+- A colored background
+- Custom SVG icon
+- Display format like `command(value)`
+
+This improves usability and aligns with the bonus visual smoothness requirement.
+![Visualizer Screenshot](./final-visual-layout.png)
+
+
 ### 📁 Source Files:
 - File path: `src/visualizers/panels/TurtleCommandWizard/TurtleCommandWizardPanel.js`
 - Zipped structure: [TurtleCommandWizard.zip](./TurtleCommandWizard.zip)
