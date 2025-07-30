@@ -182,7 +182,7 @@ def draw_flowerburst_matplotlib():
     output_path = "drawing_output_flowerburst.png"
     plt.savefig(output_path, bbox_inches='tight', pad_inches=0, dpi=150)
     plt.close()
-    print(f"\\n✅ Image saved to {output_path}")
+    print(f"✅ Image saved to {output_path}")
 
 # ───── Launcher ─────
 if __name__ == "__main__":
@@ -219,15 +219,15 @@ if __name__ == "__main__":
             elif selection == 99:
                 for name in options:
                     reset_turtle()
-                    print(f"\\n🎬 Running: {name}...")
+                    print(f"🎬 Running: {name}...")
                     globals()[name]()
-                    input(f"\\n✅ {name} complete! Press Enter for next...")
+                    input(f"✅ {name} complete! Press Enter for next...")
                     t.clear()
             elif 1 <= selection <= len(options):
-                print(f"\\n🌀 Running: {options[selection - 1]}...\\n")
+                print(f"🌀 Running: {options[selection - 1]}...")
                 reset_turtle()
                 globals()[options[selection - 1]]()
-                input("\\n✅ Drawing complete! Press Enter to return to menu...")
+                input("✅ Drawing complete! Press Enter to return to menu...")
                 t.clear()
             else:
                 print("❌ Invalid choice. Please enter a number from 0 to 11.")
