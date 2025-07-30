@@ -60,7 +60,7 @@ This improves usability and aligns with the bonus visual smoothness requirement.
 
 ### 🌈 Sample Output
 
-Below is the result of `drawRainbowSpiral()` — one of the 10 dynamic drawing functions built using the Turtle Design Studio.
+Below is the result of `draw_flowerburst_()` — one of the 10 dynamic drawing functions built using the Turtle Design Studio.
 
 ![Rainbow Spiral Output](./drawing_output_flowerburst.png)
 
