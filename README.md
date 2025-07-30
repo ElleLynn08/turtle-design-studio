@@ -36,7 +36,15 @@ While the Vanderbilt-hosted WebGME instance prevents direct upload of custom vis
 - Designed to simplify command creation without dragging or wiring blocks
 
 ---
+### 📁 Source Files:
+- File path: `src/visualizers/panels/TurtleCommandWizard/TurtleCommandWizardPanel.js`
+- Zipped structure: [TurtleCommandWizard.zip](./TurtleCommandWizard.zip)
 
+---
+### 🔒 Deployment Note:
+Due to file access restrictions in the student-hosted WebGME environment, this visualizer could not be linked to the `TurtleLang_instance`. All code is included for review and can be registered in a full-access instance of WebGME.
+
+---
 ## 🎨 Visual Enhancements
 
 To ensure model creation is intuitive and visually accessible, I added SVG-based decorators to key command nodes. Each command displays:
@@ -48,22 +56,13 @@ This improves usability and aligns with the bonus visual smoothness requirement.
 
 ![Visualizer Screenshot](./final-visual-layout.png)
 
+---
+
 ### 🌈 Sample Output
 
 Below is the result of `drawRainbowSpiral()` — one of the 10 dynamic drawing functions built using the Turtle Design Studio.
 
 ![Rainbow Spiral Output](./drawing_output_flowerburst.png)
-
----
-
-### 📁 Source Files:
-- File path: `src/visualizers/panels/TurtleCommandWizard/TurtleCommandWizardPanel.js`
-- Zipped structure: [TurtleCommandWizard.zip](./TurtleCommandWizard.zip)
-
----
-
-### 🔒 Deployment Note:
-Due to file access restrictions in the student-hosted WebGME environment, this visualizer could not be linked to the `TurtleLang_instance`. All code is included for review and can be registered in a full-access instance of WebGME.
 
 ---
 
